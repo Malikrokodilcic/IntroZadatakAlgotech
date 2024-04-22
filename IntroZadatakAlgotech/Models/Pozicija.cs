@@ -39,6 +39,6 @@ namespace IntroZadatakAlgotech.Models
         public string Status { get; set; }
 
         // Relacije
-        public List<Prijava> Kandidati_Prijave { get; set; }
+        public ICollection<Prijava> Prijave { get; set; }
     }
 }

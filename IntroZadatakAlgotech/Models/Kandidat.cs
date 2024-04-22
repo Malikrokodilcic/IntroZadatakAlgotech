@@ -28,7 +28,7 @@ namespace IntroZadatakAlgotech.Models
         public string BrojTelefona { get; set; }
 
         // Relacije
-        public List<Prijava> Kandidati_Prijave { get; set; }
+        public ICollection<Prijava> Prijave { get; set; }
 
     }
 }
