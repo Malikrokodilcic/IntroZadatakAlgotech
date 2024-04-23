@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IntroZadatakAlgotech.Models
@@ -21,10 +22,12 @@ namespace IntroZadatakAlgotech.Models
 
         [Required(ErrorMessage = "Polje DatumPrijave ne sme biti NULL")]
         [DataType(DataType.Date, ErrorMessage = "Polje DatumPrijave treba da bude u DateTime formatu")]
+        [DisplayName("Datum prijave")]
         public DateTime DatumPrijave { get; set; }
 
         [Required(ErrorMessage = "Polje Status ne sme biti NULL")]
         [RegularExpression("^(PRIHVACEN | ODBIJEN | CEKA)$", ErrorMessage = "Polje Status ima vrednost razlicitu od OTVORENA/ZATVORENA")]
+        [DefaultValue("CEKA")]
         public string Status { get; set; }
 
 

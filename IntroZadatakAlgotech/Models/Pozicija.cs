@@ -23,14 +23,17 @@ namespace IntroZadatakAlgotech.Models
         [Required(ErrorMessage = "Polje NacinRada ne sme biti NULL")]
         [RegularExpression("^(REMOTE | OFFICE | HYBRID)$", ErrorMessage = "Polje NacinRada ima vrednost razlicitu od REMOTE/OFFICE/HYBRID")]
         [DefaultValue("HYBRID")]
+        [DisplayName("Nacin rada")]
         public string NacinRada { get; set; }
 
         [Required(ErrorMessage = "Polje DatumObjave ne sme biti NULL")]
         [DataType(DataType.Date, ErrorMessage = "Polje DatumObjave treba da bude u DateTime formatu")]
+        [DisplayName("Datum objave")]
         public DateTime DatumObjave { get; set; }
 
         [Required(ErrorMessage = "Polje DatumKrajaPrijave ne sme biti NULL")]
         [DataType(DataType.Date, ErrorMessage = "Polje DatumKrajaPrijave treba da bude u DateTime formatu")]
+        [DisplayName("Datum kraja prijave")]
         public DateTime DatumKrajaPrijave { get; set; }
 
         [Required(ErrorMessage = "Polje Status ne sme biti NULL")]

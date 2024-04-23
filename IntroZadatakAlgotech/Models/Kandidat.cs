@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace IntroZadatakAlgotech.Models
 {
@@ -25,6 +26,7 @@ namespace IntroZadatakAlgotech.Models
 
         [Required(ErrorMessage = "Polje BrojTelefona ne sme biti NULL")]
         [MaxLength(13, ErrorMessage = "Broj telefona moze imati maksimalno 13 cifara")]
+        [DisplayName("Broj telefona")]
         public string BrojTelefona { get; set; }
 
         // Relacije
