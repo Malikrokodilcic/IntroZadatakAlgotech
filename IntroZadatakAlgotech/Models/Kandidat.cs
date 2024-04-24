@@ -15,6 +15,11 @@ namespace IntroZadatakAlgotech.Models
         [MaxLength(50)]
         public string Prezime { get; set; }
 
+        [Required(ErrorMessage = "Polje Email ne sme biti NULL")]
+        [MaxLength(50)]
+        [EmailAddress(ErrorMessage = "Email adresa nema odgovarajuci format")]
+        public string Email { get; set; }
+
         [Required(ErrorMessage = "Polje JMBG ne sme biti NULL")]
         [MaxLength(13, ErrorMessage = "JMBG mora imati 13 cifara")]
         [MinLength(13, ErrorMessage = "JMBG mora imati 13 cifara")]

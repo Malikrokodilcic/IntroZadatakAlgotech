@@ -27,6 +27,7 @@ namespace IntroZadatakAlgotech.Data
 
             modelBuilder.Entity<Prijava>().HasIndex(p => new {p.KandidatID, p.PozicijaID}).IsUnique();
 
+            modelBuilder.Entity<Kandidat>().HasIndex(k => k.JMBG).IsUnique();
 
         }
 

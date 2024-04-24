@@ -4,6 +4,7 @@ using IntroZadatakAlgotech.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IntroZadatakAlgotech.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240424095640_dodatoPoljeEmailUKandidate")]
+    partial class dodatoPoljeEmailUKandidate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,9 +64,6 @@ namespace IntroZadatakAlgotech.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("KandidatID");
-
-                    b.HasIndex("JMBG")
-                        .IsUnique();
 
                     b.ToTable("Kandidati");
                 });
